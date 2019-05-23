@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-// LogDebug determins whether debug logs should be output or not.
+// LogDebug determines whether debug logs should be output or not.
 var LogDebug bool
 
 // LogOutput is the file logs are written to.
