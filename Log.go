@@ -19,7 +19,7 @@ var logsDirectory string
 var currentDay int
 
 // Startup initialises the package.
-func Startup(logDebug bool, logOutput *os.File) error {
+func Startup(logOutput *os.File, logPrefix string, logDebug bool) error {
 	LogDebug = logDebug
 	LogOutput = logOutput
 
@@ -32,7 +32,7 @@ func Startup(logDebug bool, logOutput *os.File) error {
 	currentDay = time.Now().Day()
 
 	logger = &log.Logger{}
-	logger.SetPrefix("[MYTRAINR_API] [" + time.Now().Format("02-Jan-2006 15:04:05") + "] ")
+	logger.SetPrefix(logPrefix)
 	logger.SetOutput(LogOutput)
 
 	return nil

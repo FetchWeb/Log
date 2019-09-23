@@ -10,7 +10,7 @@ import (
 
 // TestLog writes test logs to Stdout.
 func TestLog(t *testing.T) {
-	if err := log.Startup(true, os.Stdout); err != nil {
+	if err := log.Startup(os.Stdout, "TEST", true); err != nil {
 		t.Fatalf("Failed to startup logger: %v", err)
 	}
 
